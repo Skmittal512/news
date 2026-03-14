@@ -1,0 +1,119 @@
+.blog-detail-row {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+
+}
+
+/* LEFT */
+.blog-detail-left {
+  display: flex;
+  justify-content: center;
+  width: 25%;
+  padding-top: 15px;
+}
+
+/* CENTER */
+.blog-detail-center {
+  width: 50%;
+
+}
+
+/* RIGHT */
+.blog-detail-right {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+/* 🔥 CATEGORY + STARS PILL */
+.category-rating-pill {
+  // height: 70px; 
+  // display: flex;
+  // align-items: center;
+  // gap: 14px;
+  z-index: 20;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 999px;
+
+  // background: rgba(255, 225, 160, 0.9);
+  // backdrop-filter: blur(6px);
+
+  // box-shadow:
+  //   0 6px 12px rgba(0, 0, 0, 0.25),
+  //   0 14px 30px rgba(0, 0, 0, 0.35);
+
+
+  // justify-content: center;
+  // gap: 14px;
+}
+
+
+// /* CATEGORY TEXT */
+// .category-rating-pill .category {
+//   font-size: 18px;
+//   font-weight: 600;
+//   letter-spacing: 0.4px;
+//   color: #333;
+//   text-transform: uppercase;
+//   line-height: 1;
+//   display: flex;
+//   align-items: center;
+// }
+
+// /* STARS */
+// .category-rating-pill .stars {
+//   display: flex;
+//   gap: 6px;
+//   font-size: 20px;
+//   color: #f5b301;
+//   line-height: 1;
+//   display: flex;
+//   align-items: center;
+//   transform: translateY(-1px);
+// }
+
+
+
+/// /* 📱 MOBILE FIXES */
+@media (max-width: 1199px) {
+  .blog-detail-row {
+    flex-direction: column;
+    row-gap: 16px;
+
+  }
+
+  .blog-detail-left,
+  .blog-detail-center,
+  .blog-detail-right {
+    flex: unset;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Action bar center */
+  .blog-detail-left {
+    order: 2;
+    justify-content: center;
+  }
+
+  /* Tabs full width */
+  .blog-detail-center {
+    order: 3;
+  }
+
+  /* Category + stars pill */
+  .blog-detail-right {
+    order: 1;
+    padding-top: 20px;
+  }
+
+  .category-rating-pill {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

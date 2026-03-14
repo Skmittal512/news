@@ -1,0 +1,17 @@
+.reply-form {
+
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+
+  textarea {
+    resize: none;
+  }
+
+  .send-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+}

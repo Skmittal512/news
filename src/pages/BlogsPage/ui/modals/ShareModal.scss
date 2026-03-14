@@ -1,0 +1,89 @@
+.share-modal {
+    .modal-content {
+        border-radius: 28px;
+        border: none;
+        padding: 35px;
+        background: linear-gradient(145deg, #fff9ef, #f6ead6);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal-header {
+        border-bottom: 0;
+        padding-bottom: 1rem;
+
+        .modal-title-custom {
+            font-weight: 700;
+            margin: 0;
+            font-size: 18px;
+        }
+    }
+
+    .share-modal-body {
+        text-align: center;
+        position: relative;
+
+        .copy-success {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2e7d32;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            pointer-events: none;
+        }
+
+        h4 {
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        /* ICON GRID */
+        .share-icons {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+
+            .share-icon-box {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 22px;
+                cursor: pointer;
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+                transition: 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-3px);
+                }
+            }
+        }
+
+        /* LINK PREVIEW */
+        .share-link-preview {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-size: 13px;
+            word-break: break-all;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    }
+}
+
+/* Proper backdrop */
+.modal-backdrop {
+    &.show {
+        opacity: 0.6 !important;
+    }
+}
