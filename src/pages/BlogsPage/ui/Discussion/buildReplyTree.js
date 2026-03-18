@@ -1,12 +1,17 @@
 export const buildReplyTree = (replies) => {
+
+  const sortedReplies = [...replies].sort(
+    (a, b) => b.createdAt.seconds - a.createdAt.seconds
+  );
+
   const map = {};
   const roots = [];
 
-  replies.forEach((reply) => {
+  sortedReplies.forEach((reply) => {
     map[reply.id] = { ...reply, children: [] };
   });
 
-  replies.forEach((reply) => {
+  sortedReplies.forEach((reply) => {
     if (reply.parentReplyID) {
       map[reply.parentReplyID]?.children.push(map[reply.id]);
     } else {
