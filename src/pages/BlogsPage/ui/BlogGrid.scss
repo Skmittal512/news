@@ -12,6 +12,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 26px;
+
+  @media (max-width: 479px) {
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  }
 }
 
 /* card */
@@ -27,7 +31,8 @@
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    ;
   }
 }
 
