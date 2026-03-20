@@ -8,15 +8,18 @@ import {
   FaArrowUp,
   FaNotesMedical,
   FaClone,
+  FaRegListAlt,
 } from "react-icons/fa";
 
 import BlogContent from "./BlogContent";
 import RelatedBlogs from "./RelatedBlogs";
 import ThreadDiscussion from "./Discussion/ThreadDiscussion";
+import FeaturedBlogCard from "./FeaturedBlogCard/FeaturedBlogCard";
 import "./BlogDetailTabs.scss";
 
 const TABS = [
   { key: "content", label: "Content", icon: <FaFileAlt /> },
+    { key: "description", label: "Description", icon: <FaRegListAlt /> },
   { key: "notes", label: "Notes", icon: < FaNotesMedical /> },
   { key: "related", label: "Related", icon: <FaLink /> },
   { key: "info", label: "Info", icon: <FaInfoCircle /> },
@@ -93,6 +96,12 @@ const BlogDetailTabs = ({ blog, relatedBlogs }) => {
             <div className="tab-content-wrapper">
               <BlogContent content={blog.newsContent} />
               <RelatedBlogs blogs={relatedBlogs} />
+            </div>
+          )}
+
+          {activeTab === "description" && (
+            <div className="tab-content-wrapper">
+              <FeaturedBlogCard blog={blog} />
             </div>
           )}
 

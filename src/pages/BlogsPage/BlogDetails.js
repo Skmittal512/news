@@ -55,15 +55,6 @@ const BlogDetail = () => {
           
           <div className="category-rating-pill">
             <FeaturedBlogCard blog={blog}/>
-            {/* <div className="category">
-              {blog.newsArticleCategory}
-            </div>
-
-            <div className="stars">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <FaStar key={i} />
-              ))}
-            </div> */}
           </div>
         </div>
 
